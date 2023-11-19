@@ -1,0 +1,80 @@
+<div class="container">
+    <app-receipt #receipt (Output) ="clearData()"></app-receipt>
+    <div class="left-container">
+        <div class="main_table">
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th><b>PRODUCTS</b></th>
+                        <th><b>PRICE</b></th>
+                        <th><b>QUANTITY</b></th>
+                        <th><b>TOTAL</b></th>
+                    </tr>
+                </thead>
+                <tbody *ngIf="selectedProductList.length > 0">
+                    <tr *ngFor="let item of selectedProductList; let i = index">
+                        <td>
+                            <button class="remove_product" (click)="removeItem(item)"></button> 
+                        </td>
+                        <td data-column="First Name">{{item.name}}</td>
+                        <td data-column="Last Name">{{item.price}}</td>
+                        <td data-column="Job Title">
+                            <div class="number">
+                                <button class="minus" (click)="handleMinus(item)">-</button>
+                                <input class="num" value="0" [(ngModel)]="item.quantity" />
+                                <button class="plus" (click)="handlePlus(item)">+</button>
+                            </div>
+                        </td>
+                        <td data-column="Twitter">{{item.quantity * item.price}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="alert_box" *ngIf="selectedProductList.length == 0">
+                <span>THERE ARE NO PRODUCTS</span>
+            </div>
+        </div>
+        <div class="total_table">
+            <table>
+                <tr>
+                    <th class="first_column">SubTotal</th>
+                    <td class="second_column">{{grandTotal}} INR</td>
+                    <td class="third_column">{{itemTotal}} items</td>
+                </tr>
+                <tr>
+                    <th class="first_column">VAT Tax</th>
+                    <td class="second_column">
+                        <input type="number" class="discount" min="0" max="100" value="0" [(ngModel)]="vatTax" (keyup)="vatTaxfunction()"/> %
+                    </td>
+                    <td class="third_column">{{vatTaxTotal}} INR</td>
+                </tr>
+                <tr>
+                    <th class="first_column">Discount</th>
+                    <td class="second_column">
+                        <input type="number" class="discount" min="0" max="100" value="0" [(ngModel)]="discount" (keyup)="discountfunction()"/> %
+                    </td>
+                    <td class="third_column">{{discountTotal}} INR</td>
+                </tr>
+                <tr>
+                    <th class="first_column">Total</th>
+                    <td class="total" colspan="2">{{grandTotal + vatTaxTotal + discountTotal}} INR</td>
+                    <!-- <td class="third_column"></td> -->
+                </tr>
+            </table>
+            <div class="action_button">
+                <button class="cancel" role="button" (click)="emptycart()">CANCEL SALE</button>
+                <button class="submit" role="button" (click)="openModal()">PROCESS SALE</button>
+            </div>
+        </div>
+    </div>
+    <div class="right-container">
+        <div class="product" *ngFor="let product of productlist" (click)="selectProduct(product)">
+            <img [src]='product.image'>
+            <span class="text">{{product.name}}</span>
+            <span class="description">
+                <p>Price : {{product.price}}</p>
+                <p>Desc : {{product.description}}</p>
+            </span>
+        </div>
+    </div>
+</div>

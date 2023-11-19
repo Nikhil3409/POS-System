@@ -1,0 +1,52 @@
+<div #myModal class="container">
+    <div class="content">
+        <p class="header">Receipt</p>
+        <div class="main_content">
+            <span class="sale"><strong>Sale No : {{saleNumber}}</strong></span>
+            <p class="date">Date : {{date}}</p>
+            <table id="myHeader">
+                <tr>
+                    <th>#</th>
+                    <th>Products</th>
+                    <th>Quantity</th>
+                    <th>SubTotal</th>
+                </tr>
+                <tr *ngIf="data2.length == 0">
+                    <th colspan="4">
+                        <div class="alert_box">
+                            <span>THERE ARE NO PRODUCTS</span>
+                        </div>
+                    </th>
+                </tr>
+                <tr *ngFor="let item of data2;index as i">
+                    <td>{{i + 1 }}</td>
+                    <td>{{item.name}}</td>
+                    <td>{{item.quantity}}</td>
+                    <td>{{item.price}}</td>
+                </tr>
+            </table>
+            <table id="myHeader" *ngFor="let a of data1;">
+                <tr class="total">
+                    <td>Total Items</td>
+                    <td>{{a.totalitem}}</td>
+                    <td>Total</td>
+                    <td><strong>{{a.total}} INR</strong></td>
+                </tr>
+                <tr class="total">
+                    <td colspan="2"></td>
+                    <td>Discount</td>
+                    <td><strong>{{a.discount}}%</strong></td>
+                </tr>
+                <tr class="total">
+                    <td colspan="2"></td>
+                    <td>VAT</td>
+                    <td><strong>{{a.vat}}%</strong></td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+        <div class="button_container">
+            <button class="close_button" (click)="close()">Close</button>
+        </div>
+    </div>
+</div>

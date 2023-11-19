@@ -1,0 +1,114 @@
+[
+    {
+        "name": "Headphone",
+        "price": "250",
+        "category": "Electronics",
+        "description": "Boat Headphone",
+        "image": "assets/images/headphone.jpg"
+    },
+    {
+        "name": "Sweater",
+        "price": "650",
+        "category": "Clothing",
+        "description": "fashion, clothes, sweater",
+        "image": "assets/images/sweater.jpg"
+    },
+    {
+        "name": "Tie",
+        "price": "100",
+        "category": "Clothing",
+        "description": "fashion, tie, clothes",
+        "image": "assets/images/tie.jpg"
+    },
+    {
+        "name": "Jacket",
+        "price": "190",
+        "category": "Clothing",
+        "description": "winter jacket",
+        "image": "assets/images/jacket.jpg"
+    },
+    {
+        "name": "Keyboard",
+        "price": "500",
+        "category": "Electronics",
+        "description": "Wireless Keyboard",
+        "image": "assets/images/keyboard.jpg"
+    },
+    {
+        "name": "LED TV",
+        "price": "25000",
+        "category": "Electronics",
+        "description": "LG TV",
+        "image": "assets/images/led_tv.jpg"
+    },
+    {
+        "name": "Monitor",
+        "price": "5000",
+        "category": "Electronics",
+        "description": "4K Monitor",
+        "image": "assets/images/monitor.jpg"
+    },
+    {
+        "name": "Mouse",
+        "price": "400",
+        "category": "Electronics",
+        "description": "Wireless Mouse",
+        "image": "assets/images/mouse.jpg"
+    },
+    {
+        "name": "Apple",
+        "price": "50",
+        "category": "Food",
+        "description": "food",
+        "image": "assets/images/apple.jpg"
+    },
+    {
+        "name": "Kiwi",
+        "price": "60",
+        "category": "Food",
+        "description": "Good for health",
+        "image": "assets/images/kiwi.jpg"
+    },
+    {
+        "name": "Grapes",
+        "price": "100",
+        "category": "Food",
+        "description": "Good for health",
+        "image": "assets/images/grapes.jpg"
+    },
+    {
+        "name": "Notebook",
+        "price": "45",
+        "category": "Education",
+        "description": "notebook",
+        "image": "assets/images/notebook.jpg"
+    },
+    {
+        "name": "Pizza",
+        "price": "360",
+        "category": "Food",
+        "description": "Tasty and spicy",
+        "image": "assets/images/pizza.jpg"
+    },
+    {
+        "name": "Burger",
+        "price": "140",
+        "category": "Food",
+        "description": "Craving",
+        "image": "assets/images/burger.jpg"
+    },
+    {
+        "name": "Shoes",
+        "price": "1800",
+        "category": "Fashion",
+        "description": "Sport shoes",
+        "image": "assets/images/shoes.jpg"
+    },
+    {
+        "name": "Lipstick",
+        "price": "800",
+        "category": "Fashion",
+        "description": "Lakme Lipstick",
+        "image": "assets/images/lipstick.jpg"
+    }
+]
